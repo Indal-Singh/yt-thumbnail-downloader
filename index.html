@@ -1,0 +1,455 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>YouTube Thumbnail Downloader By Indal Singh</title>
+<style>
+	body
+	{
+	margin:0;
+	padding:0;
+	}
+	#mainyt
+	{
+	display:grid;
+	justify-content:center;
+	width:100%;
+	box-sizing:border-box;
+	
+	}
+  #container
+  {
+	width:800px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction: column;
+  }
+  .ytHeading
+   {
+	margin-top:30px;
+	font-weight:bold;
+	background:#00bd0f;
+	color:#fff;
+	display:block;
+	width:50%;
+	padding:5px;
+   }
+  #ytlink
+  {
+	margin:20px;
+	width:60vw!important;
+	height:40px;
+	padding:10px;
+		
+  }
+  
+  input
+  {
+	outline:0;
+	font-size:16px;
+	line-height:24px;
+	padding:15px 25px;
+	box-shadow:0 4px 12px -2px rgba(107,117,161,.5);
+  }
+  
+  input
+  {
+   border:0;
+   border-radius:4px;
+   color:#797c86
+  }
+  
+  
+    input::-webkit-input-placeholder
+    {
+       color:#c7c8cc
+	}
+	input:-moz-placeholder
+	{
+	   color:#c7c8cc
+	}
+	input::-moz-placeholder
+	{
+	   color:#c7c8cc
+	}
+	input:-ms-input-placeholder
+	{
+	   color:#c7c8cc
+	}
+	
+	#downloadbtn
+	{
+		border:0;
+		display:block;
+		padding:10px 20px;
+		background:#00bd0f;
+		color:#fff;
+		opacity:.9;
+		text-decoration:none;
+		border-radius:3px;
+		cursor:pointer;
+	}
+	.heading
+	{
+		font-size:30px;
+		font-weight:bold;
+
+	}
+	.fullHd
+	{
+		display:grid;
+		justify-content:center;
+		alin-items:center;
+		position:relative;
+		box-sizing:border-box;
+		
+	}
+	.mediumQH
+	{
+		display:grid;
+		justify-content:center;
+		align-items:center;
+		position:relative;
+		box-sizing:border-box;
+		width:49%;
+		float:left;
+	}
+	
+	.lowQH
+	{
+		display:grid;
+		justify-content:center;
+		alin-items:center;
+		position:relative;
+		box-sizing:border-box;
+		width:49%;
+		float:right;
+	}
+	
+	.download
+	{
+	border:0;
+	position:absolute;
+	right:40px;
+	top:50px;
+	display:block;
+	padding:10px 20px;
+	background:#00bd0f;
+	color:#fff;
+	opacity:.9;
+	text-decoration:none;
+	border-radius:3px;
+	z-index:9999;
+	}
+	.download:hover
+	{
+	opacity:1;
+	}
+	
+	.inmlq
+	{
+	width:100%;
+	
+	}
+	
+	#footerYt
+	{
+	 width:100%;
+	 height:90px;
+	 background:black;
+	 margin-top:20px;
+	 display:flex;
+	 justify-content:center;
+	 align-items:center;
+	 color:#fff;
+	 flex-direction: column;
+	Z-index:9999999999;
+	margin-bottom:-30px;
+	}
+	
+	
+	.web_name,web-year
+	{
+		text-align:center;
+		margin:5px;
+	}
+	.web_name
+	{
+	  font-size:18px;
+	}
+	
+	
+	@media screen and (max-width:845px)
+	{
+		
+		.fullHd
+		{
+			width: 600px;
+		}
+		
+		.retion
+		{
+		 width:600px;
+		}
+	}
+	
+	
+	
+	@media screen and (max-width:800px)
+	{
+		 #container
+		{
+			width:600px;
+		}
+		
+	}
+	
+@media screen and (max-width:845px)
+	{
+		
+		.fullHd
+		{
+			width: 400px;
+		}
+		
+		.retion
+		{
+		 width:400px;
+		}
+	}	
+	
+	
+	
+	@media screen and (max-width:600px)
+	{
+		 #container
+		{
+			width:400px;
+		}
+		
+		.heading
+			{
+			 font-size:20px;
+			}
+		.ytHeading
+		{
+			width:60%;
+			font-size:14px;
+		}
+	}
+
+	@media screen and (max-width:430px)
+	{
+		
+		.fullHd
+		{
+			width: 300px;
+		}
+		
+		.retion
+		{
+		 width: 300px;
+		}
+		
+		 #container
+		{
+			width:300px;
+		}
+		.download
+		{
+			position:absolute;
+			right:15px;
+			top:50px;
+			padding:5px 15px;
+			
+			
+		}
+		.heading
+			{
+			 font-size:18px;
+			}
+		.ytHeading
+		{
+			width:70%;
+			font-size:14px;
+		}
+	}
+	
+	
+	@media screen and (max-width:300px)
+	{
+		
+		.fullHd
+		{
+			width: 200px;
+		}
+		
+		.retion
+		{
+		 width: 200px;
+		}
+		
+		 #container
+		{
+			width:200px;
+		}
+				.download
+			{
+				border:0;
+			
+				font-size:12px;
+				position:absolute;
+				right:10px;
+				top:25px;
+				display:block;
+				padding:2px 5px;
+				background:#00bd0f;
+				color:#fff;
+				opacity:.9;
+				text-decoration:none;
+				border-radius:3px;
+				z-index:9999;
+			}
+			.download:hover
+			{
+			    opacity:1;
+			}
+			.heading
+			{
+			 font-size:16px;
+			}
+		.ytHeading
+		{
+			width:100%;
+			font-size:14px;
+		}
+		
+	}
+</style>
+
+
+<div id="mainyt">
+
+
+
+
+<div id="container">
+
+<div align="center">
+<div class="ytHeading">Paste YouTube Link Here</div>
+<input type="text" id="ytlink" onsubmit="yt_thunbnail_download(ytlink.value)"  oninput="OnInputVAlue()" placeholder="https://www.youtube.com/watch?v=k3y1hJPVavY">
+<br>
+<button onclick="yt_thunbnail_download(ytlink.value)" id = "downloadbtn">Download Image</button>
+</div>
+<br>
+<br>
+
+
+<!-- High Qulity-->
+
+<div class="fullHd">
+<div class="heading">Full HD</div>
+
+<a target="_blank" id = "thumb_downloadhq" download href="/"><button class="download">Download</button></a>
+<a target="_blank" id = "thumb_downloadhql" download href="/" style="width: 100%;position: relative;">
+
+<img src="HQ.jpg" width="100%" id = "thumbnailhq" title="YouTube Thumbnail Downloader FULL HQ IMAGE" alt="YouTube Thumbnail Downloader FULL HQ IMAGE">
+
+</a>
+</div>
+
+<div class="inmlq retion">
+<!-- Medium Qulity-->
+
+<div class="mediumQH">
+<div class="heading">Medium</div>
+
+<a target="_blank" id = "thumb_downloadmq" download href="/" ><button class="download">Download</button></a>
+
+<a target="_blank" id = "thumb_downloadmql" download href="/" style="width: 100%;position: relative;">
+<img src="MQ.jpg" width="100%" id = "thumbnailmq" title="YouTube Thumbnail Downloader Medium Qulity IMAGE" alt="YouTube Thumbnail Downloader Medium QulityIMAGE">
+
+</a>
+</div>
+
+
+
+<!-- Low Qulity-->
+
+<div class="lowQH">
+<div class="heading">Small</div>
+
+<a target="_blank" id = "thumb_downloadlq" download href="/" ><button class="download">Download</button></a>
+
+<a target="_blank" id = "thumb_downloadlql" download href="/" style="width: 100%;position: relative;">
+
+<img src="LQ.jpg" width="100%" id = "thumbnaillq" title="YouTube Thumbnail Downloader Low Qulity IMAGE" alt="YouTube Thumbnail Downloader Low Qulity IMAGE">
+</a>
+
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div id="footerYt">
+<div class="web_name">Indal Singh</div>
+<div class="web-year">2021-2022</div>
+</div>
+
+<script>
+function yt_thunbnail_download(url)
+{
+regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
+
+Match=url.match(regExp);
+
+
+
+if (Match && Match[1].length==11)
+{
+vidUrl = Match[1];
+
+thumbnailhq='http://img.youtube.com/vi/'+vidUrl+'/maxresdefault.jpg';
+thumbnailmq='http://img.youtube.com/vi/'+vidUrl+'/hqdefault.jpg';
+thumbnaillq='http://img.youtube.com/vi/'+vidUrl+'/mqdefault.jpg';
+
+
+document.getElementById('thumbnailhq').src=thumbnailhq;
+document.getElementById('thumbnailmq').src=thumbnailmq;
+document.getElementById('thumbnaillq').src=thumbnaillq;
+
+
+document.getElementById('thumb_downloadhq').href=thumbnailhq;
+document.getElementById('thumb_downloadmq').href=thumbnailmq;
+document.getElementById('thumb_downloadlq').href=thumbnaillq;
+
+document.getElementById('thumb_downloadhql').href=thumbnailhq;
+document.getElementById('thumb_downloadmql').href=thumbnailmq;
+document.getElementById('thumb_downloadlql').href=thumbnaillq;
+
+}
+else
+{alert("The URL you have entered maybe incorrect. Please Enter a correct URL.");
+}
+
+}
+
+		
+	    function OnInputVAlue()
+		{
+			/*
+			setTimeout(function(){ document.getElementById("downloadbtn").click(); console.log('indal');}, 1000);
+			*/
+		}
+		
+		
+var YtLink = document.getElementById("ytlink");
+
+YtLink.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("downloadbtn").click();
+  }
+});
+
+</script>
